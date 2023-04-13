@@ -10,11 +10,11 @@ DEFAULT_DIMS = None
 
 
 def set_default_dims(dims):
-	global DEFAULT_DIMS
-	DEFAULT_DIMS = _grammarette._validate_dims(dims)
+    global DEFAULT_DIMS
+    DEFAULT_DIMS = _grammarette._validate_dims(dims)
 
 
 def induce(lexicon, dims=None):
-	if dims is None:
-		dims = DEFAULT_DIMS
-	return _grammarette.Grammarette(lexicon, dims)
+    if dims is None:
+        dims = DEFAULT_DIMS
+    return _grammarette.Grammarette(lexicon, dims)
