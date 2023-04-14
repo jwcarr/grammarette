@@ -56,7 +56,7 @@ class Grammarette:
         self._regex = None
         self._regexc = None
 
-    def __str__(self):
+    def __repr__(self):
         return f"Grammarette[{self.shortest_grammar}]"
 
     def _align_signals(self, reverse=False):
