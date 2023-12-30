@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "grammarette"
+authors = [
+  { name="Jon Carr", email="jon.carr@rhul.ac.uk" },
+]
+description = "A lightweight grammar inducer for toy lexicons"
+readme = "README.md"
+license = {text = "GPLv3"}
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: OS Independent",
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+]
+requires-python = ">=3.8"
+dependencies = [
+  "numpy>=1.20",
+  "scipy>=1.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/jwcarr/grammarette"
+
+[tool.setuptools]
+packages = ["grammarette"]
+
+[tool.setuptools_scm]
+version_file = "grammarette/_version.py"
+version_file_template = '__version__ = "{version}"'
